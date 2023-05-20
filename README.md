@@ -976,5 +976,115 @@ branch 'ft/squashing' set up to track 'origin/ft/squashing'.
 
 Izere@DESKTOP-9TB6QQ1 MINGW64 ~/Documents/on-firday/the-gym-repos-dedicated (ft/squashing)
 $
- 
+ Izere@DESKTOP-9TB6QQ1 MINGW64 ~/Documents/foked/git-cafe-exercise (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Izere@DESKTOP-9TB6QQ1 MINGW64 ~/Documents/foked/git-cafe-exercise (main)
+$ git commit -am  "cache the modified index file"                                                                                        
+[main 6810f7a] cache the modified index file
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Izere@DESKTOP-9TB6QQ1 MINGW64 ~/Documents/foked/git-cafe-exercise (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Izere@DESKTOP-9TB6QQ1 MINGW64 ~/Documents/foked/git-cafe-exercise (main)
+$ git remote -v
+origin  https://github.com/jeremiech/git-cafe-exercise.git (fetch)
+origin  https://github.com/jeremiech/git-cafe-exercise.git (push)
+
+Izere@DESKTOP-9TB6QQ1 MINGW64 ~/Documents/foked/git-cafe-exercise (main)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 322 bytes | 161.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/jeremiech/git-cafe-exercise.git
+   d1d3f9c..6810f7a  main -> main
+
+Izere@DESKTOP-9TB6QQ1 MINGW64 ~/Documents/foked/git-cafe-exercise (main)
+$ git branch feat-menu
+
+Izere@DESKTOP-9TB6QQ1 MINGW64 ~/Documents/foked/git-cafe-exercise (main)
+$ git checkout feat-menu
+Switched to branch 'feat-menu'
+
+Izere@DESKTOP-9TB6QQ1 MINGW64 ~/Documents/foked/git-cafe-exercise (feat-menu)
+$ git status
+On branch feat-menu
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index-4.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Izere@DESKTOP-9TB6QQ1 MINGW64 ~/Documents/foked/git-cafe-exercise (feat-menu)
+$ commit -am "modify index-4 file"
+bash: commit: command not found
+
+Izere@DESKTOP-9TB6QQ1 MINGW64 ~/Documents/foked/git-cafe-exercise (feat-menu)
+$ git commit -am "modify index-4 file"
+[feat-menu 49a5084] modify index-4 file
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Izere@DESKTOP-9TB6QQ1 MINGW64 ~/Documents/foked/git-cafe-exercise (feat-menu)
+$ git push -u origin feat-menu --force
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 298 bytes | 59.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: 
+remote: Create a pull request for 'feat-menu' on GitHub by visiting:
+remote:      https://github.com/jeremiech/git-cafe-exercise/pull/new/feat-menu
+remote:
+To https://github.com/jeremiech/git-cafe-exercise.git
+ * [new branch]      feat-menu -> feat-menu
+branch 'feat-menu' set up to track 'origin/feat-menu'.
+
+Izere@DESKTOP-9TB6QQ1 MINGW64 ~/Documents/foked/git-cafe-exercise (feat-menu)
+$ git branch  bug-fix
+
+Izere@DESKTOP-9TB6QQ1 MINGW64 ~/Documents/foked/git-cafe-exercise (feat-menu)
+$ git switch  bug-fix
+Switched to branch 'bug-fix'
+
+Izere@DESKTOP-9TB6QQ1 MINGW64 ~/Documents/foked/git-cafe-exercise (bug-fix)
+$ git checkout feat-menu
+Switched to branch 'feat-menu'
+Your branch is up to date with 'origin/feat-menu'.
+
+Izere@DESKTOP-9TB6QQ1 MINGW64 ~/Documents/foked/git-cafe-exercise (feat-menu)
+$ git switch  bug-fix
+Switched to branch 'bug-fix'
+M       index-4.html
+
+Izere@DESKTOP-9TB6QQ1 MINGW64 ~/Documents/foked/git-cafe-exercise (bug-fix)
+$ git commit -am "modify index-4 title"
+[bug-fix c83dd98] modify index-4 title
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Izere@DESKTOP-9TB6QQ1 MINGW64 ~/Documents/foked/git-cafe-exercise (bug-fix)
+$ git remote -v
+origin  https://github.com/jeremiech/git-cafe-exercise.git (fetch)
+origin  https://github.com/jeremiech/git-cafe-exercise.git (push)
  
